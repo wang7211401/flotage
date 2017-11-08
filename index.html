@@ -6,12 +6,41 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="http://cdn.omlzz.com/web/js/cdn_h5.css?v=10.24.2">
+    <style>
+        .bg-bubbles li {
+            position: fixed;
+            top: -10%;
+            list-style: none;
+            display: block;
+            width: 3rem;
+            animation: downFloat 10s infinite;
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+            z-index: 10
+        }
+
+        .bg-bubbles li img {
+            width: 100%
+        }
+        @keyframes downFloat {
+            0% {
+                top: -20%;
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+
+            100% {
+                top: 110%;
+                -webkit-transform: rotate(600deg);
+                transform: rotate(600deg)
+            }
+        }
+    </style>
 </head>
 <body>
 <ul class="bg-bubbles">
 </ul>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
     $(function () {
         function initBubbles() { //初始化漂浮物
