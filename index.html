@@ -50,7 +50,7 @@
                 url:'data.json',
             }).then(function(data){
                 for(var i=0;i<data.content.length;i++){
-                    let dataLi = ` <li><img src="${data.content[i].url}" alt="飘浮装饰"></li>`;
+                    let dataLi = `<li><img src="${data.content[i].url}" alt="飘浮装饰"></li>`;
                     $('.bg-bubbles').append(dataLi)
                 }
                 $('.bg-bubbles li').each(function (k,v) {
